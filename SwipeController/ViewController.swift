@@ -26,7 +26,10 @@ class ViewController: UIViewController,SwipeMenuDelegate {
     }
 
 
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }  
+
     func didSwipeActionTriggered(isDone: Bool) {
         
         print("Width:  \(self.menuWidthConstant.constant)")
