@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nh-qf-Aj9">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="9tO-rg-avy"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4gA-u7-reo" kind="embed" id="LiL-h2-7NO"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbL-iC-ceM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                                <connections>
+                                    <segue destination="GuD-8d-BHh" kind="embed" identifier="detail" id="Ylx-t7-QXJ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dbL-iC-ceM" secondAttribute="trailing" id="2qP-lO-9Vy"/>
+                            <constraint firstItem="7nh-qf-Aj9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DMc-Bk-r7N"/>
+                            <constraint firstItem="dbL-iC-ceM" firstAttribute="leading" secondItem="7nh-qf-Aj9" secondAttribute="trailing" id="JMo-ih-9mP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7nh-qf-Aj9" secondAttribute="bottom" id="NIS-bW-6eJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbL-iC-ceM" secondAttribute="bottom" constant="1" id="Tp8-Oz-Wya"/>
+                            <constraint firstItem="dbL-iC-ceM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="axr-KF-V4G"/>
+                            <constraint firstItem="7nh-qf-Aj9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nuG-Ig-Ita"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuWidthConstant" destination="9tO-rg-avy" id="oRA-DP-aBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="91.304347826086968"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WEJ-G1-uWO">
+            <objects>
+                <viewController id="4gA-u7-reo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3N2-CD-Doq"/>
+                        <viewControllerLayoutGuide type="bottom" id="0b4-hX-zA5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V6C-Mn-CbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdA-PN-zfc">
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Menu" id="VWq-Mv-o9B"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.29583007373097048" blue="0.42848910908369742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGS-zQ-Zfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="-72"/>
+        </scene>
+        <!--Swipe View Controller-->
+        <scene sceneID="QZJ-sy-0N6">
+            <objects>
+                <viewController id="GuD-8d-BHh" customClass="SwipeViewController" customModule="SwipeController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7L3-Jt-jGx"/>
+                        <viewControllerLayoutGuide type="bottom" id="DzP-NX-A8C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6cM-OM-kU4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-sL-fka">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="AVB-jW-mlH">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Z8z-IO-GMe">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RUq-d4-jd6">
+                                                <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="menu"/>
+                                                <state key="selected" image="menu_selected"/>
+                                                <state key="highlighted" image="menu_selected"/>
+                                                <connections>
+                                                    <action selector="swipeMenuActionWithSender:" destination="GuD-8d-BHh" eventType="touchUpInside" id="8P6-Gk-RD6"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.6917876595472503" blue="0.39221396260035246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pdJ-1k-3De" appends="YES" id="Wg7-Al-qFQ"/>
+                            <outletCollection property="gestureRecognizers" destination="OpR-h5-Pes" appends="YES" id="dzn-7l-LcL"/>
+                            <outletCollection property="gestureRecognizers" destination="bV9-Ab-uNy" appends="YES" id="tXX-4V-L6q"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6E3-Os-AVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pdJ-1k-3De">
+                    <connections>
+                        <action selector="swipeGestureMenuActionWithSender:" destination="GuD-8d-BHh" id="7G8-Af-pEM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="OpR-h5-Pes">
+                    <connections>
+                        <action selector="swipeGestureMenuActionWithSender:" destination="GuD-8d-BHh" id="dgv-RY-Ij6"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="bV9-Ab-uNy">
+                    <connections>
+                        <action selector="doubleTapMenuActionWithSender:" destination="GuD-8d-BHh" id="Hmf-Wh-Bnc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-809" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="21" height="21"/>
+        <image name="menu_selected" width="21" height="21"/>
+    </resources>
+</document>
